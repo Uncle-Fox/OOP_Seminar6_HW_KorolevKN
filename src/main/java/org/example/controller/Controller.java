@@ -12,21 +12,8 @@ import java.util.Scanner;
 public class Controller {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        GameController gameController = new GameController(scanner, new View());
-        gameController.startGame();
-    }
-}
+        View view = new View();
 
-class GameController {
-    private final Scanner scanner;
-    private final View view;
-
-    public GameController(Scanner scanner, View view) {
-        this.scanner = scanner;
-        this.view = view;
-    }
-
-    public void startGame() {
         view.displayWelcomeMessage();
 
         while (true) {
